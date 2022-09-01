@@ -1,0 +1,161 @@
+* {
+    font-family: 'Roboto Slab', serif ;
+}
+
+/*Variables*/
+$header-footer: #6b9080;
+$titulos: #84a98c;
+$texto: #f2f2f2;
+$bg: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+
+/*Estilos para el nav*/
+header {
+    background-color: $header-footer;
+    nav {
+        ul {
+            li {
+                a {
+                    color: $texto;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    transition: all 0.3s ease;
+                    &:hover, &:active {
+                        color: #111;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Estilos para el footer*/
+footer {
+    background-color: $header-footer; 
+    color:#2f3e46;
+}
+
+/*Estilos para la página "index"*/
+#index {
+    .section-1 {
+        div {
+            font-size: 1.5em;
+            padding: 3em;
+            background: $bg;
+            background-attachment: fixed;
+            h1, p {
+                color: $texto;
+            }  
+        }
+    }
+    .section-2 {
+        background-color:#a4c3b2;
+        .div-2 {
+            .card-index {
+                width: 17rem;
+                transition: all 0.5s ease;
+                a, h4 {
+                    color:#111;
+                    text-decoration: none;
+                }
+                &:hover {
+                    filter: brightness(0.9);
+                }
+                }
+         
+            }
+    }
+}
+
+/*Estilos para la página "nosotros"*/
+#nosotros {
+    section {
+        .img-fluid {
+            filter:brightness(0.8);  
+        }
+    }
+    section {
+        div {
+            background: $bg;
+            background-attachment: fixed;
+            div {
+                h1 {
+                    color: $titulos;
+                    font-size: 2rem;
+                    text-align: center;
+                    padding: 1em;
+                }
+                h2, h3 {
+                    color: $titulos;
+                    font-size: 1.3rem;
+                }
+                p, li {
+                    color: $texto;
+                    font-size: 1rem; 
+                }
+            }
+        }
+    }
+}
+
+/*Estilos para la página "productos"*/
+#productos {
+    background: $bg;
+    background-attachment: fixed;
+    div {
+        h1 {   
+            color: $titulos;
+            font-size: 2rem;
+            text-align: center;
+            padding: 1em;}
+    }
+    section {
+        div {
+            p {
+                color: $texto;
+                font-size: 1rem; 
+            }
+        }
+    }
+}
+
+/*Estilos para la página "encontranos"*/
+#encontranos {
+    background: $bg;
+    background-attachment: fixed;
+    div {
+        h1 {
+            color: $titulos;
+            font-size: 2rem;
+            text-align: center;
+            padding: 1em;
+        }
+    }
+    div {
+        h2, p {
+            color: $texto;
+        }
+    }
+}
+
+/*Estilos para la página "contacto"*/
+#contacto {
+    background: $bg;
+    background-attachment: fixed;
+    div {
+        h1{
+            color: $titulos;
+            font-size: 2rem;
+            text-align: center;
+            padding: 1em;
+        }
+    }
+    form {
+        div {
+            label {
+                color: #fff;
+            }
+        }
+    }
+}
