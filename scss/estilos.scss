@@ -2,11 +2,9 @@
     font-family: 'Roboto Slab', serif ;
 }
 
-/*Variables*/
-$header-footer: #6b9080;
-$titulos: #84a98c;
-$texto: #f2f2f2;
-$bg: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+@import "variables"; 
+@import "maps";
+
 
 /*Estilos para el nav*/
 header {
@@ -15,7 +13,7 @@ header {
         ul {
             li {
                 a {
-                    color: $texto;
+                    color: map-get($map, texto);
                     border-radius: 5px;
                     letter-spacing: 1px;
                     transition: all 0.3s ease;
@@ -34,6 +32,17 @@ header {
 footer {
     background-color: $header-footer; 
     color:#2f3e46;
+    .redes {
+        .bi-facebook {
+            @include redes($facebook); 
+        }
+        .bi-whatsapp {
+            @include redes($whatsapp);
+        }
+        .bi-instagram {
+            @include redes($instagram)
+        }
+    }
 }
 
 /*Estilos para la página "index"*/
@@ -45,7 +54,7 @@ footer {
             background: $bg;
             background-attachment: fixed;
             h1, p {
-                color: $texto;
+                color: map-get($map, texto);
             }  
         }
     }
@@ -80,18 +89,18 @@ footer {
             background: $bg;
             background-attachment: fixed;
             div {
-                h1 {
-                    color: $titulos;
+                .sobre-nosotros {
+                    color: map-get($map, titulos);
                     font-size: 2rem;
                     text-align: center;
                     padding: 1em;
                 }
                 h2, h3 {
-                    color: $titulos;
+                    color: map-get($map, titulos);
                     font-size: 1.3rem;
                 }
                 p, li {
-                    color: $texto;
+                    color: map-get($map, texto);
                     font-size: 1rem; 
                 }
             }
@@ -105,7 +114,7 @@ footer {
     background-attachment: fixed;
     div {
         h1 {   
-            color: $titulos;
+            color: map-get($map, titulos);
             font-size: 2rem;
             text-align: center;
             padding: 1em;}
@@ -113,8 +122,11 @@ footer {
     section {
         div {
             p {
-                color: $texto;
+                color: map-get($map, texto);
                 font-size: 1rem; 
+            }
+            img {
+                min-width: 250px;
             }
         }
     }
@@ -122,21 +134,12 @@ footer {
 
 /*Estilos para la página "encontranos"*/
 #encontranos {
-    background: $bg;
-    background-attachment: fixed;
+    @extend #productos;
     div {
-        h1 {
-            color: $titulos;
-            font-size: 2rem;
-            text-align: center;
-            padding: 1em;
+        h2 {
+            color: map-get($map, texto);
         }
-    }
-    div {
-        h2, p {
-            color: $texto;
-        }
-    }
+    } 
 }
 
 /*Estilos para la página "contacto"*/
@@ -145,7 +148,7 @@ footer {
     background-attachment: fixed;
     div {
         h1{
-            color: $titulos;
+            color: map-get($map, titulos);
             font-size: 2rem;
             text-align: center;
             padding: 1em;
@@ -159,3 +162,5 @@ footer {
         }
     }
 }
+
+

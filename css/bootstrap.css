@@ -3,6 +3,14 @@
   font-family: 'Roboto Slab', serif; }
 
 /*Variables*/
+/*Mixin*/
+/*Mapa*/
+.estilo--titulos {
+  color: #84a98c; }
+
+.estilo--texto {
+  color: #f2f2f2; }
+
 /*Estilos para el nav*/
 header {
   background-color: #6b9080; }
@@ -19,6 +27,21 @@ header {
 footer {
   background-color: #6b9080;
   color: #2f3e46; }
+  footer .redes .bi-facebook {
+    font-size: 2em;
+    color: #fff; }
+    footer .redes .bi-facebook:hover {
+      color: #3b5998; }
+  footer .redes .bi-whatsapp {
+    font-size: 2em;
+    color: #fff; }
+    footer .redes .bi-whatsapp:hover {
+      color: #25d366; }
+  footer .redes .bi-instagram {
+    font-size: 2em;
+    color: #fff; }
+    footer .redes .bi-instagram:hover {
+      color: #8a3ab9; }
 
 /*Estilos para la página "index"*/
 #index .section-1 div {
@@ -47,7 +70,7 @@ footer {
 #nosotros section div {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
   background-attachment: fixed; }
-  #nosotros section div div h1 {
+  #nosotros section div div .sobre-nosotros {
     color: #84a98c;
     font-size: 2rem;
     text-align: center;
@@ -60,29 +83,23 @@ footer {
     font-size: 1rem; }
 
 /*Estilos para la página "productos"*/
-#productos {
+#productos, #encontranos {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
   background-attachment: fixed; }
-  #productos div h1 {
+  #productos div h1, #encontranos div h1 {
     color: #84a98c;
     font-size: 2rem;
     text-align: center;
     padding: 1em; }
-  #productos section div p {
+  #productos section div p, #encontranos section div p {
     color: #f2f2f2;
     font-size: 1rem; }
+  #productos section div img, #encontranos section div img {
+    min-width: 250px; }
 
 /*Estilos para la página "encontranos"*/
-#encontranos {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
-  background-attachment: fixed; }
-  #encontranos div h1 {
-    color: #84a98c;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1em; }
-  #encontranos div h2, #encontranos div p {
-    color: #f2f2f2; }
+#encontranos div h2 {
+  color: #f2f2f2; }
 
 /*Estilos para la página "contacto"*/
 #contacto {

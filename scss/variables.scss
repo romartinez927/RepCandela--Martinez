@@ -1,0 +1,15 @@
+/*Variables*/
+$header-footer: #6b9080;
+$instagram: #8a3ab9;
+$facebook: #3b5998;
+$whatsapp: #25d366;
+$bg: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
+
+/*Mixin*/
+@mixin redes($hover) {
+    font-size: 2em;
+    color: #fff;
+    &:hover {
+        color:$hover;
+    }
+}
