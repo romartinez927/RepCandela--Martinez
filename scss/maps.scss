@@ -1,8 +1,7 @@
 /*Mapa*/
 $map: (
     titulos: #76c893,
-    texto: #f2f2f2,
-    white2: #edf2f4
+    texto: #f2f2f2
 );
 
 @each $t, $color in $map {

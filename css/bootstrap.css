@@ -11,39 +11,38 @@
 .estilo--texto {
   color: #f2f2f2; }
 
-.estilo--white2 {
-  color: #edf2f4; }
-
 /*Estilos para el nav*/
 header {
   background-color: #52b69a; }
-  header nav ul li a {
-    color: #f2f2f2;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease; }
-    header nav ul li a:hover, header nav ul li a:active {
-      color: #111;
-      background: #fff; }
+  header nav ul li {
+    padding: 0.6em; }
+    header nav ul li a {
+      color: #f2f2f2;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease; }
+      header nav ul li a:hover, header nav ul li a:active {
+        color: #2f3e46;
+        background: #fff; }
 
 /*Estilos para el footer*/
 footer {
   background-color: #52b69a;
   color: #2f3e46; }
-  footer .redes .bi-facebook {
+  footer .footer-redes .bi-facebook {
     font-size: 2em;
     color: #fff; }
-    footer .redes .bi-facebook:hover {
+    footer .footer-redes .bi-facebook:hover {
       color: #3b5998; }
-  footer .redes .bi-whatsapp {
+  footer .footer-redes .bi-whatsapp {
     font-size: 2em;
     color: #fff; }
-    footer .redes .bi-whatsapp:hover {
+    footer .footer-redes .bi-whatsapp:hover {
       color: #25d366; }
-  footer .redes .bi-instagram {
+  footer .footer-redes .bi-instagram {
     font-size: 2em;
     color: #fff; }
-    footer .redes .bi-instagram:hover {
+    footer .footer-redes .bi-instagram:hover {
       color: #8a3ab9; }
 
 /*Estilos para la página "index"*/
@@ -59,12 +58,19 @@ footer {
   background-color: #edf2f4; }
   #index .section-2 .div-2 .card-index {
     width: 17rem;
-    transition: all 0.5s ease; }
+    transition: all 0.5s ease;
+    margin-top: 1.2em; }
     #index .section-2 .div-2 .card-index a, #index .section-2 .div-2 .card-index h4 {
-      color: #111;
+      color: #2f3e46;
       text-decoration: none; }
     #index .section-2 .div-2 .card-index .btn {
       color: #edf2f4; }
+    #index .section-2 .div-2 .card-index .card-body {
+      text-align: center; }
+      #index .section-2 .div-2 .card-index .card-body .card-title {
+        font-weight: bold; }
+      #index .section-2 .div-2 .card-index .card-body p {
+        color: #2f3e46; }
     #index .section-2 .div-2 .card-index:hover {
       filter: brightness(0.9); }
 
@@ -82,7 +88,7 @@ footer {
 #nosotros section div {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
   background-attachment: fixed; }
-  #nosotros section div div .sobre-nosotros {
+  #nosotros section div div h1 {
     color: #76c893;
     font-size: 2rem;
     text-align: center;
@@ -105,17 +111,20 @@ footer {
     padding: 1em; }
   #productos section .card, #encontranos section .card {
     width: 18rem;
-    transition: all 0.5s ease; }
-    #productos section .card p, #encontranos section .card p {
-      color: #f2f2f2;
-      font-size: 1rem; }
+    transition: all 0.5s ease;
+    text-align: center;
+    margin-bottom: 1em; }
     #productos section .card img, #encontranos section .card img {
       min-width: 250px; }
     #productos section .card:hover, #encontranos section .card:hover {
       filter: brightness(0.8); }
+    #productos section .card .card-body p, #encontranos section .card .card-body p {
+      color: #2f3e46;
+      font-size: 1rem;
+      font-weight: bold; }
 
 /*Estilos para la página "encontranos"*/
-#encontranos div h2 {
+#encontranos div h2, #encontranos div p {
   color: #f2f2f2; }
 
 /*Estilos para la página "contacto"*/
