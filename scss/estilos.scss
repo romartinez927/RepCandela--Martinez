@@ -5,6 +5,11 @@
 @import "variables"; 
 @import "maps";
 
+/*Estilos generales*/
+body {
+    height: 100vh;
+    background: $header-footer;
+}
 
 /*Estilos para el nav*/
 header {
@@ -49,23 +54,31 @@ footer {
 /*Estilos para la página "index"*/
 #index {
     .section-1 {
-        div {
-            font-size: 1.5em;
-            padding: 4em;
+        .reposteria-candela {
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            padding: 5em;
             background: $bg;
             background-attachment: fixed;
             h1, p {
                 color: map-get($map, texto);
             }  
+            h1 {
+                font-size: 2.7em;
+            }
+            p {
+                font-size: 1.1em;
+            }
         }
     }
     .section-2 {
-        background-color: $white;
-        .div-2 {
+        background-color: $white;   
+            .div-2 {
             .card-index {
                 width: 17rem;
                 transition: all 0.5s ease;
-                margin-top: 1.2em;
+                margin-top: 2em;
                 a, h4 {
                     color: $black;
                     text-decoration: none;
@@ -79,9 +92,11 @@ footer {
                     text-align: center;
                     .card-title {
                         font-weight: bold;
+                        font-size: 1.6em;
                     }
                     p {
-                        color: $black
+                        color: $black;
+                        font-size: 1.1em;
                     }
                 }
 
@@ -95,13 +110,21 @@ footer {
     .section-3 {
         background-color: $white;
         div {
+            h3 {
+                font-size: 1.9em; 
+            }
             p {
-                font-size: 1.2rem;
+                font-size: 1.4em;
             }
         }
         div {
             img {
-                filter:brightness(0.8);
+                transition: all 1s ease;
+                border-radius: 3em;
+                &:hover {
+                    filter: brightness(0.9);
+                    border-radius: 50%;
+                }
             }
         }
     }
@@ -109,34 +132,40 @@ footer {
 
 /*Estilos para la página "nosotros"*/
 #nosotros {
-    section {
-        .img-fluid {
-            filter:brightness(0.8);  
-        }
-    }
-    section {
-        div {
+        section {
             background: $bg;
             background-attachment: fixed;
             div {
                 h1 {
                     color: map-get($map, titulos);
-                    font-size: 2rem;
+                    font-size: 2em;
                     text-align: center;
                     padding: 1em;
                 }
                 h2, h3 {
                     color: map-get($map, titulos);
-                    font-size: 1.3rem;
+                    font-size: 1.6em;
                 }
                 p, li {
                     color: map-get($map, texto);
-                    font-size: 1rem; 
+                    font-size: 1.3em; 
+                }
+            }
+        }
+        .nosotros-img {
+            div {
+                img {
+                    transition: all 0.5s ease;
+                    margin-top: 0.9em;
+                    border-radius: 3em;
+                    max-width:18em;
+                    &:hover {
+                        filter: brightness(0.8);
+                    }
                 }
             }
         }
     }
-}
 
 /*Estilos para la página "productos"*/
 #productos {
@@ -145,7 +174,7 @@ footer {
     div {
         h1 {   
             color: map-get($map, titulos);
-            font-size: 2rem;
+            font-size: 2em;
             text-align: center;
             padding: 1em;}
     }
@@ -164,7 +193,7 @@ footer {
             .card-body {
                 p {
                     color: $black;
-                    font-size: 1rem; 
+                    font-size: 1em; 
                     font-weight: bold;
                 }
             }
@@ -174,12 +203,21 @@ footer {
 
 /*Estilos para la página "encontranos"*/
 #encontranos {
+    height: 80vh;
+    width: 100%;
     @extend #productos;
-    div {
-        h2, p {
-            color: map-get($map, texto);
+    .encontranos-main {
+        height: 100%;
+        .map {
+            height: 60%;
         }
-    } 
+        div {
+            height: 30%;
+            h2, p {
+                color: map-get($map, texto);
+            }
+        } 
+    }
 }
 
 /*Estilos para la página "contacto"*/
@@ -189,9 +227,10 @@ footer {
     div {
         h1{
             color: map-get($map, titulos);
-            font-size: 2rem;
+            font-size: 2em;
             text-align: center;
             padding: 1em;
+            margin-bottom:-1.4em
         }
     }
     form {
@@ -203,14 +242,56 @@ footer {
     }
 }
 
-@media (min-width: 576px) and (max-width:1100px) {
+/*Responsive Design*/
+@media (min-width: 320px) and (max-width:1100px) {
     #index {
         .section-3 {
             div {
+                transition: all 0.8s ease;
                 p {
-                    font-size: 1rem;
+                    font-size: 1.1em;
                 }
               }
         }
     }
+}
+
+@media (min-width: 1400px) {
+    #index {
+        .section-1 {
+            .reposteria-candela {
+                height: 20em;
+            }
+        }
+        .section-2 {
+            .div-2 {
+                .card-index {
+                    width: 20rem;
+              }
+            }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+    #index {
+        .section-2 {
+            .div-2 {
+                .card-index {
+                    width: 23rem;
+              }
+            }
+        .section-3 {
+            div {
+                transition: all 0.8s ease;
+                h3 {
+                    font-size: 2em;
+                }
+                p {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+  }
 }

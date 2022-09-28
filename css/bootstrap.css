@@ -11,6 +11,11 @@
 .estilo--texto {
   color: #f2f2f2; }
 
+/*Estilos generales*/
+body {
+  height: 100vh;
+  background: #52b69a; }
+
 /*Estilos para el nav*/
 header {
   background-color: #52b69a; }
@@ -46,20 +51,26 @@ footer {
       color: #8a3ab9; }
 
 /*Estilos para la página "index"*/
-#index .section-1 div {
-  font-size: 1.5em;
-  padding: 4em;
+#index .section-1 .reposteria-candela {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
   background-attachment: fixed; }
-  #index .section-1 div h1, #index .section-1 div p {
+  #index .section-1 .reposteria-candela h1, #index .section-1 .reposteria-candela p {
     color: #f2f2f2; }
+  #index .section-1 .reposteria-candela h1 {
+    font-size: 2.7em; }
+  #index .section-1 .reposteria-candela p {
+    font-size: 1.1em; }
 
 #index .section-2 {
   background-color: #edf2f4; }
   #index .section-2 .div-2 .card-index {
     width: 17rem;
     transition: all 0.5s ease;
-    margin-top: 1.2em; }
+    margin-top: 2em; }
     #index .section-2 .div-2 .card-index a, #index .section-2 .div-2 .card-index h4 {
       color: #2f3e46;
       text-decoration: none; }
@@ -68,37 +79,50 @@ footer {
     #index .section-2 .div-2 .card-index .card-body {
       text-align: center; }
       #index .section-2 .div-2 .card-index .card-body .card-title {
-        font-weight: bold; }
+        font-weight: bold;
+        font-size: 1.6em; }
       #index .section-2 .div-2 .card-index .card-body p {
-        color: #2f3e46; }
+        color: #2f3e46;
+        font-size: 1.1em; }
     #index .section-2 .div-2 .card-index:hover {
       filter: brightness(0.9); }
 
 #index .section-3 {
   background-color: #edf2f4; }
+  #index .section-3 div h3 {
+    font-size: 1.9em; }
   #index .section-3 div p {
-    font-size: 1.2rem; }
+    font-size: 1.4em; }
   #index .section-3 div img {
-    filter: brightness(0.8); }
+    transition: all 1s ease;
+    border-radius: 3em; }
+    #index .section-3 div img:hover {
+      filter: brightness(0.9);
+      border-radius: 50%; }
 
 /*Estilos para la página "nosotros"*/
-#nosotros section .img-fluid {
-  filter: brightness(0.8); }
-
-#nosotros section div {
+#nosotros section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./../img/85454719-vector-sin-patrón-con-productos-de-panadería-dibujado-a-mano-doodle-y-pasteles.webp);
   background-attachment: fixed; }
-  #nosotros section div div h1 {
+  #nosotros section div h1 {
     color: #76c893;
-    font-size: 2rem;
+    font-size: 2em;
     text-align: center;
     padding: 1em; }
-  #nosotros section div div h2, #nosotros section div div h3 {
+  #nosotros section div h2, #nosotros section div h3 {
     color: #76c893;
-    font-size: 1.3rem; }
-  #nosotros section div div p, #nosotros section div div li {
+    font-size: 1.6em; }
+  #nosotros section div p, #nosotros section div li {
     color: #f2f2f2;
-    font-size: 1rem; }
+    font-size: 1.3em; }
+
+#nosotros .nosotros-img div img {
+  transition: all 0.5s ease;
+  margin-top: 0.9em;
+  border-radius: 3em;
+  max-width: 18em; }
+  #nosotros .nosotros-img div img:hover {
+    filter: brightness(0.8); }
 
 /*Estilos para la página "productos"*/
 #productos, #encontranos {
@@ -106,7 +130,7 @@ footer {
   background-attachment: fixed; }
   #productos div h1, #encontranos div h1 {
     color: #76c893;
-    font-size: 2rem;
+    font-size: 2em;
     text-align: center;
     padding: 1em; }
   #productos section .card, #encontranos section .card {
@@ -120,12 +144,21 @@ footer {
       filter: brightness(0.8); }
     #productos section .card .card-body p, #encontranos section .card .card-body p {
       color: #2f3e46;
-      font-size: 1rem;
+      font-size: 1em;
       font-weight: bold; }
 
 /*Estilos para la página "encontranos"*/
-#encontranos div h2, #encontranos div p {
-  color: #f2f2f2; }
+#encontranos {
+  height: 80vh;
+  width: 100%; }
+  #encontranos .encontranos-main {
+    height: 100%; }
+    #encontranos .encontranos-main .map {
+      height: 60%; }
+    #encontranos .encontranos-main div {
+      height: 30%; }
+      #encontranos .encontranos-main div h2, #encontranos .encontranos-main div p {
+        color: #f2f2f2; }
 
 /*Estilos para la página "contacto"*/
 #contacto {
@@ -133,12 +166,32 @@ footer {
   background-attachment: fixed; }
   #contacto div h1 {
     color: #76c893;
-    font-size: 2rem;
+    font-size: 2em;
     text-align: center;
-    padding: 1em; }
+    padding: 1em;
+    margin-bottom: -1.4em; }
   #contacto form div label {
     color: #fff; }
 
-@media (min-width: 576px) and (max-width: 1100px) {
-  #index .section-3 div p {
-    font-size: 1rem; } }
+/*Responsive Design*/
+@media (min-width: 320px) and (max-width: 1100px) {
+  #index .section-3 div {
+    transition: all 0.8s ease; }
+    #index .section-3 div p {
+      font-size: 1.1em; } }
+
+@media (min-width: 1400px) {
+  #index .section-1 .reposteria-candela {
+    height: 20em; }
+  #index .section-2 .div-2 .card-index {
+    width: 20rem; } }
+
+@media (min-width: 1600px) {
+  #index .section-2 .div-2 .card-index {
+    width: 23rem; }
+  #index .section-2 .section-3 div {
+    transition: all 0.8s ease; }
+    #index .section-2 .section-3 div h3 {
+      font-size: 2em; }
+    #index .section-2 .section-3 div p {
+      font-size: 1.5em; } }
